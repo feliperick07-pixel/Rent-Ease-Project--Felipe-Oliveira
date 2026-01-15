@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rick Rental - Register</title>
+        <link rel="icon" type="image/x-icon" href="Images/LogoRR.png">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 10;
+                padding: 10;
+               align-items: center;
+               align-content: center;
+            }
+
+            #registerDiv {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                width: 300px;
+                margin: auto ;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="registerDiv">
+            <form id="registerInfo">
+                <h1>Register</h1>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br><br>
+                <input type="date" id="birthDate" name="birthDate" placeholder="Birth Date"><br><br>
+                <input type="text" id="email" name="email" placeholder="E-mail"><br><br>
+                <input type="password" id="password" name="password" placeholder="Password"><br><br>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"><br><br>
+                <button id="registerButton" type="submit">Register</button><br><br>
+                <p id="errorMessage"></p>
+                <a href="login.html">Already have an account? Click here to login</a><br><br>
+        </div>
+
+        <script src="register.js"></script>
+    </body>
