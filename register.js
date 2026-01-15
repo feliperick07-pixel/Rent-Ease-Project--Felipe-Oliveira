@@ -19,8 +19,32 @@ form.addEventListener("submit", function (event) {
         birthDate: birthDate
     };
 
+    if (
+        email ==="" ||
+        password === "" ||
+        confirmPassword === "" ||
+        firstName === "" ||
+        lastName === "" ||
+        birthDate === ""
+    ) {
+        errorMessage.textContent = "Please fill in all fields.";
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        errorMessage.textContent = "Passwords do not match.";
+        return;
+    }
+
+       
+
     console.log("Form enviado");
     console.log(userData);
+
+    localStorage.setItem("user", JSON.stringify(userData));
+    alert("Registration successful! You can now log in.");
+
+    window.location.href = "login.html";
 });
 
     
