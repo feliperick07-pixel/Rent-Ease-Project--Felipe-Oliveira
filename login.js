@@ -1,20 +1,13 @@
-const form = document.getElementById('LoginInfo');
-const errorMessage = document.getElementById('errorMessage');
-
+const form = document.getElementById("LoginInfo");
+const errorMessage = document.getElementById("errorMessage");
 
 form.addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
 
-    const userData = {
-        email: email,
-        password: password
-    };
-
-    console.log("Form enviado");
-    console.log(userData)
+    errorMessage.textContent = "";
 
     if (email === "" || password === "") {
         errorMessage.textContent = "Please fill in all fields.";
@@ -24,21 +17,19 @@ form.addEventListener("submit", function (event) {
     const savedUser = JSON.parse(localStorage.getItem("user"));
 
     if (!savedUser) {
-        alert("User not registred");
-        return
+        errorMessage.textContent = "No registered user found.";
+        return;
     }
 
     if (email === savedUser.email && password === savedUser.password) {
-        alert("Login realizado com sucesso!");
+        // salva usuário logado
+        localStorage.setItem("loggedUser", JSON.stringify(savedUser));
 
-        
-        localStorage.setItem("logged", "true");
+        // salva horário do login
+        localStorage.setItem("loginTime", Date.now());
 
-        
         window.location.href = "home.html";
     } else {
-        alert("Email ou senha incorretos");
+        errorMessage.textContent = "Invalid email or password.";
     }
-}       
-);
-
+});

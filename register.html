@@ -29,8 +29,8 @@
     </head>
     <body>
         <div id="registerDiv">
+            <h1>Register</h1>
             <form id="registerInfo">
-                <h1>Register</h1>
                 <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br><br>
                 <input type="date" id="birthDate" name="birthDate" placeholder="Birth Date"><br><br>
@@ -38,9 +38,9 @@
                 <input type="password" id="password" name="password" placeholder="Password"><br><br>
                 <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"><br><br>
                 <button id="registerButton" type="submit">Register</button><br><br>
-                <p id="errorMessage"></p>
-                <a href="login.html">Already have an account? Click here to login</a><br><br>
             </form>
+            <p id="error"></p>
+            <a href="login.html">Already have an account? Click here to login</a><br><br>
         </div>
 
         <script src="register.js"></script>

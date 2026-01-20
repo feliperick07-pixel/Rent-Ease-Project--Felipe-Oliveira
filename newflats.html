@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rick Rental - New Flats</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Images/LogoRR.png">
+
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <div id="headDIV">
+            <header>
+                <nav>
+                    <span id="welcomeUser"> </span>
+                    <a href="home.html">Home</a> 
+                    <a href="allflats.html">All Flats</a> 
+                    <a href="newflats.html">New Flats</a>
+                    <a href="updateprofile.html">Update Profile</a>
+                    <button onclick="logOut()" id="logoutButton">Logout</button>
+                </nav>
+            </header>
+        </div>
+        <div id="newFlats">
+            <h2>Add New Flats</h2>
+            <form id="newFlatsForm">
+                <input type="text" id="city" placeholder="City"><br><br>
+                <input type="text" id="streetName" placeholder="Street Name"><br><br>
+                <input type="number" id="streetNumber" placeholder="Street Number"><br><br>
+                <input type="number" id="areaSize" placeholder="Area Size (square meters)"><br><br>
+                <label>
+                    <input type="checkbox" id="hasAC"> Has Air Conditioning
+                </label><br><br>
+                <input type="number" id="yearBuilt" placeholder="Year Built"><br><br>
+                <input type="number" id="rentalPrice" placeholder="Rental Price (per month)"><br><br>
+                <p>Date Available:</p>
+                <input type="date" id="dateAvailable"><br><br>
+                <button type="submit" id="addFlatButton">Add Flat</button><br><br>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+        <script src="newflats.js"></script>
+    </body>
+</html>
