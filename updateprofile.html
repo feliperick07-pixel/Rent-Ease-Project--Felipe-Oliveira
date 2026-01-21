@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update Profile</title>
+    </head>
+    <body>
+        <div id="headDIV">
+                <header>
+                    <nav>
+                        <span id="welcomeUser"> </span>
+                        <a href="home.html">Home</a> 
+                        <a href="allflats.html">All Flats</a> 
+                        <a href="newflats.html">New Flats</a>
+                        <a href="updateprofile.html">Update Profile</a>
+                        <button onclick="logOut()" id="logoutButton">Logout</button>
+                    </nav>
+                </header>
+
+        </div>
+        <div id="updateProfileDiv">
+            <form id="updateProfileForm">
+                <h2>Update Profile</h2>
+                <input type="text" id="firstName" placeholder="First Name"><br><br>
+                <input type="text" id="lastName" placeholder="Last Name"><br><br>
+                <input type="date" id="birthDate"><br><br>
+
+                <button type="submit" id="updateProfileButton">Update Profile</button><br><br>
+            </form>
+            <p id="updateMessage"></p>
+        </div>
+        <script src="updateprofile.js"></script>
+    </body>
+    
+</html>

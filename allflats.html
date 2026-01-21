@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Flats</title>
+    </head>
+    <body>
+        <div id="headDIV">
+            <header>
+                <nav>
+                    <span id="welcomeUser"> </span>
+                    <a href="home.html">Home</a> 
+                    <a href="allflats.html">All Flats</a> 
+                    <a href="newflats.html">New Flats</a>
+                    <a href="updateprofile.html">Update Profile</a>
+                    <button onclick="logOut()" id="logoutButton">Logout</button>
+                </nav>
+            </header>
+        </div>   
+        <div id="allflats">
+            <h2>All Available Flats</h2>
+            <div id="filter">
+                <select id="sortPrice"> 
+                    <option value="">Sort by Price</option>
+                    <option value="asc">Low to High</option>
+                    <option value="desc">High to Low</option>
+                </select>
+
+                <select id="filterAC">
+                    <option value="">Filter by AC</option>
+                    <option value="yes">Has AC</option>
+                    <option value="no">No AC</option>
+                </select>
+
+                <input type="text" id="filterCity" placeholder="Filter by City">
+                <button id="filterButton">Filter</button>
+                <button id="clearButton">Clear Filter</button>
+            </div>
+            <div id="flatsContainer">
+                <table  border="1">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Street Name</th>
+                            <th>Street Number</th>
+                            <th>Area Size (sqm)</th>
+                            <th>Has AC</th>
+                            <th>Year Built</th>
+                            <th>Rental Price (per month)</th>
+                            <th>Date Available</th>
+                        </tr>
+                    </thead>
+                    <tbody id="flatsTable">
+                        
+                    </tbody>
+                </table>
+            </div>
+                
+                
+        </div>
+        <script src="allflats.js"></script>
+    </body>
+
+
+</html>
