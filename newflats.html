@@ -6,8 +6,105 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="Images/LogoRR.png">
-
         <style>
+            body {
+                background: #f4f6f8;
+                font-family: Arial, sans-serif;
+                align-items: center;
+
+            }
+
+            #newFlats {
+                background: white;
+                width: 400px;
+                margin: 40px auto;
+                padding: 20px;
+                border-radius: 10px;
+                justify-content: center;
+                text-align: center;
+                
+            }
+
+            button {
+                background: #1f3a5f;
+                color: white;
+                border: none;
+                padding: 10px;
+                justify-content: ;
+            }
+
+            header {
+                background-color: #1f3a5f;
+                padding: 12px 20px;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            
+            #welcomeUser {
+                color: #ffffff;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+
+            
+            nav a {
+                color: #ffffff;
+                text-decoration: none;
+                margin: 8px 12px;
+                font-weight: 500;
+            }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+            
+            #logoutButton {
+                background-color: #ffffff;
+                color: #1f3a5f;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            #logoutButton:hover {
+                background-color: #e0e0e0;
+            }
+
+            input {
+                margin-left: 15px;
+                width: 90%;
+                height: 25px;
+                padding: auto;
+                
+            }
+
+            #addFlatButton {
+                width: 100%;
+                height: 30px;
+                margin-top: 10px;
+            }
+
+            #checkboxAC {
+                font-size: 14px;
+                display: flex;
+                gap: 8px;
+            }
+
+            input[type="checkbox"] {
+                margin-left: 30px;
+                width: auto;
+                height: auto;
+            }
+
 
         </style>
     </head>
@@ -26,15 +123,16 @@
             </header>
         </div>
         <div id="newFlats">
+
             <h2>Add New Flats</h2>
             <form id="newFlatsForm">
                 <input type="text" id="city" placeholder="City"><br><br>
                 <input type="text" id="streetName" placeholder="Street Name"><br><br>
                 <input type="number" id="streetNumber" placeholder="Street Number"><br><br>
                 <input type="number" id="areaSize" placeholder="Area Size (square meters)"><br><br>
-                <label>
+                <label id="checkboxAC">
                     <input type="checkbox" id="hasAC"> Has Air Conditioning
-                </label><br><br>
+                </label><br>
                 <input type="number" id="yearBuilt" placeholder="Year Built"><br><br>
                 <input type="number" id="rentalPrice" placeholder="Rental Price (per month)"><br><br>
                 <p>Date Available:</p>

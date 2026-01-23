@@ -30,7 +30,7 @@ form.addEventListener("submit",function(event){
         yearBuilt: Number(yearBuilt),
         rentPrice: Number(rentalPrice),
         dateAvailable: dateAvailable,
-        isFavorite: true
+        isFavorite: false
     }
 
     flats.push(flat);

@@ -1,10 +1,10 @@
-const user=JSON.parse(localStorage.getItem("user"))||{};
+const user=JSON.parse(localStorage.getItem("loggedUser"))||{};
 
 if(!user){
     window.location.href="login.html";
 }
 
-document.getElementById("welcomeUser").innerText=`Welcome, ${user.name}!`;
+document.getElementById("welcomeUser").innerText=`Welcome, ${user.firstName} ${user.lastName}!`;
 
 document.getElementById("firstName").value = user.firstName;
 document.getElementById("lastName").value = user.lastName;
